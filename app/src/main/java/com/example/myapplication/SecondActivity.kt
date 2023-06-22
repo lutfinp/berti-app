@@ -2,10 +2,13 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
+
+    private val viewModel by viewModels<SecondActivityViewModel>()
     private lateinit var binding: ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,25 +16,14 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var nilaiOperasi = 1
-        if (intent.hasExtra("OPERASI")){
-            nilaiOperasi = intent.getIntExtra("OPERASI", 1)
-        }
+        with(binding) {
+            viewModel.getNewsGermanList()
 
-        val viewModel = ViewModelProvider(
-            this,
-            SecondActivityVMFactory(nilaiOperasi)
-        )[SecondActivityViewModel::class.java]
-
-        with(binding){
-            viewModel.data.observe(this@SecondActivity){
-                angka.text = it.toString()
+            viewModel.newsGermanList.observe(this@SecondActivity) {
+                recyclerView.setHasFixedSize(true)
+                recyclerView.layoutManager = LinearLayoutManager(this@SecondActivity)
+                recyclerView.adapter = Adapter2(it)
             }
-
-            plus.setOnClickListener{ viewModel.tambah()}
-            minus.setOnClickListener{ viewModel.kurang()}
         }
     }
-
-
 }

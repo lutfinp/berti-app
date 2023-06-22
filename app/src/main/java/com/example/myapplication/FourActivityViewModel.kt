@@ -5,32 +5,32 @@ import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.api.APIConfiguration
-import com.example.myapplication.news.ListNewsGerman
-import com.example.myapplication.news.NewsGermanItem
+import com.example.myapplication.news.ListNewsUS
+import com.example.myapplication.news.NewsUSItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SecondActivityViewModel(private val app: Application): AndroidViewModel(app) {
+class FourActivityViewModel(private val app: Application): AndroidViewModel(app) {
 
     private val client = APIConfiguration.getAPIServices()
 
-    var newsGermanList = MutableLiveData<MutableList<NewsGermanItem>>()
+    var newsUSList = MutableLiveData<MutableList<NewsUSItem>>()
 
-    fun getNewsGermanList() {
-        client.getNewsGermanList().enqueue(object : Callback<ListNewsGerman> {
+    fun getNewsUSList() {
+        client.getNewsUSList().enqueue(object : Callback<ListNewsUS> {
             override fun onResponse(
-                call: Call<ListNewsGerman>,
-                response: Response<ListNewsGerman>
+                call: Call<ListNewsUS>,
+                response: Response<ListNewsUS>
             ) {
                 if (response.isSuccessful) {
-                    newsGermanList.value = (response.body()?.articles ?: emptyList()) as MutableList<NewsGermanItem>?
+                    newsUSList.value = (response.body()?.articles ?: emptyList()) as MutableList<NewsUSItem>?
                 } else {
                     Toast.makeText(app, "Masalah pada Cloud", Toast.LENGTH_SHORT).show()
                 }
             }
 
-            override fun onFailure(call: Call<ListNewsGerman>, t: Throwable) {
+            override fun onFailure(call: Call<ListNewsUS>, t: Throwable) {
                 Toast.makeText(app, "Masalah pada Server", Toast.LENGTH_SHORT).show()
             }
 
