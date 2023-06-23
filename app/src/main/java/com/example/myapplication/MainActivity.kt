@@ -3,7 +3,10 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.myapplication.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -26,6 +29,11 @@ class MainActivity : AppCompatActivity() {
             us.setOnClickListener{
                 startActivity(Intent(this@MainActivity, FourActivity::class.java))
             }
+//            val navHostFragment = supportFragmentManager
+//                .findFragmentById(binding.fragmentContainerView4.id)
+//                    as NavHostFragment
+//
+//            binding.bottomNav.setupWithNavController(navHostFragment.navController)
         }
     }
 }

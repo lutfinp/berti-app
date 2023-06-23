@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profil">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imgprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/imgprofil"
+        android:id="@+id/linerprofil"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CREATOR"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lutfi Nofal Pratama"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shp"
+            android:backgroundTint="@color/abu_abu"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ahmad Zikry Salam"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shp"
+            android:backgroundTint="@color/abu_abu"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linerprofil"
+        android:background="@drawable/button_shp"
+        android:width="290dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="TO INSTAGRAM LUTFI"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/poppinsbold"
+        android:id="@+id/btninstalutfi"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btninstalutfi"
+        android:background="@drawable/button_shp"
+        android:width="290dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="TO INSTAGRAM Zikry"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/poppinsbold"
+        android:id="@+id/btninstazikry"/>
+
+
+</RelativeLayout>

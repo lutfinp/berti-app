@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+
+    >
+
+    <ImageView
+        android:id="@+id/regis_gmbr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="img1"
+        android:src="@drawable/gambar1"
+        tools:ignore="ImageContrastCheck" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="img_back"
+        android:id="@+id/gmbr_back"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regis_gmbr1"
+        android:text="Please Register"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinssemibold"
+        android:id="@+id/regis_txt1"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regis_txt1"
+        android:text="Let's read the latest news"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/regis_txt2"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/regis_txt2"
+        android:padding="30dp"
+        android:id="@+id/ly_linear">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shp"
+            android:hint="Full Name"
+            android:autofillHints="Full Name"
+            android:paddingStart="19dp"
+            android:backgroundTint="@color/abu_abu"
+            android:id="@+id/edt_fullname"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shp"
+            android:layout_marginTop="10dp"
+            android:hint="Username"
+            android:autofillHints="Username"
+            android:paddingStart="19dp"
+            android:backgroundTint="@color/abu_abu"
+            android:id="@+id/edt_username"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shp"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:autofillHints="Password"
+            android:paddingStart="19dp"
+            android:backgroundTint="@color/abu_abu"
+            android:id="@+id/edt_pass"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shp"
+            android:layout_marginTop="10dp"
+            android:hint="Confirm Password"
+            android:autofillHints="Confirm Password"
+            android:paddingStart="19dp"
+            android:backgroundTint="@color/abu_abu"
+            android:id="@+id/edt_confirmPass"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_linear"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:width="290dp"
+        android:background="@drawable/button_shp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsbold"
+        android:id="@+id/btn_regis"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/btn_regis"
+        android:gravity="center"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? "
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="13sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Login"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="13sp"
+            android:id="@+id/txt_login"
+            android:textColor="@color/red"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

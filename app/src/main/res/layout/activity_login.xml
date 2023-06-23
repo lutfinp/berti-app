@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+
+    <ImageView
+        android:id="@+id/login_gmbr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="img1"
+        android:src="@drawable/gambar1"
+        tools:ignore="ImageContrastCheck" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="img_back"
+        android:id="@+id/img_back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_gmbr1"
+        android:text="Welcome!"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinssemibold"
+        android:id="@+id/login_txt1"
+        android:textColor="@color/black"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_txt1"
+        android:src="@drawable/imglogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/login_gmbr2"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/login_gmbr2"
+        android:padding="30dp"
+        android:id="@+id/ly_linear">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shp"
+            android:layout_marginTop="10dp"
+            android:hint="Username"
+            android:autofillHints="Username"
+            android:paddingStart="19dp"
+            android:backgroundTint="@color/abu_abu"
+            android:id="@+id/edt_username"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shp"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:autofillHints="Password"
+            android:paddingStart="19dp"
+            android:backgroundTint="@color/abu_abu"
+            android:id="@+id/edt_pass"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_linear"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:width="290dp"
+        android:background="@drawable/button_shp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsbold"
+        android:id="@+id/btn_login"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/btn_login"
+        android:gravity="center"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not have an account? "
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="13sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Register"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="13sp"
+            android:id="@+id/txt_register"
+            android:textColor="@color/red"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

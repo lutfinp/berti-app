@@ -2,38 +2,103 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activitymain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".MainActivity">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Welcome, In Our Apps"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="207dp"
+        android:layout_height="227dp"
+        android:layout_marginBottom="96dp"
+        android:src="@drawable/logo_berita"
+        app:layout_constraintBottom_toTopOf="@+id/ger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Let's Read The Latest News"
+        app:layout_constraintBottom_toTopOf="@+id/ger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/bbc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shp"
+        android:fontFamily="@font/poppinssemibold"
         android:text="Buka Berita dari BBC"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/ger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buka Berita Dari German"
-        app:layout_constraintBottom_toTopOf="@id/bbc"
-        app:layout_constraintStart_toStartOf="@id/bbc"
-        app:layout_constraintEnd_toEndOf="@id/bbc"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
 
     <Button
         android:id="@+id/us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shp"
+        android:fontFamily="@font/poppinssemibold"
         android:text="Buka Berita Dari Amerika"
-        app:layout_constraintTop_toBottomOf="@id/bbc"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/bbc"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@id/bbc"
-        app:layout_constraintEnd_toEndOf="@id/bbc" />
+        app:layout_constraintTop_toBottomOf="@id/bbc" />
+
+    <Button
+        android:id="@+id/ger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_shp"
+        android:fontFamily="@font/poppinssemibold"
+        android:minHeight="48dp"
+        android:text="Buka Berita Dari German"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/bbc"
+        app:layout_constraintEnd_toEndOf="@id/bbc"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@id/bbc" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
