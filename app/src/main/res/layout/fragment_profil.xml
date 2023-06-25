@@ -7,22 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".Profil">
 
-    <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/imgprofil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/profile"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="30dp"
-        />
+        android:src="@drawable/profile"
+        android:paddingBottom="5dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/imgprofil"
         android:id="@+id/linerprofil"
-        android:padding="30dp">
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="12dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -30,24 +33,21 @@
             android:text="CREATOR"
             android:textAlignment="center"
             android:textSize="30sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Lutfi Nofal Pratama"
             android:textAlignment="center"
-            android:textSize="25sp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_shp"
-            android:backgroundTint="@color/abu_abu"/>
+            android:textSize="20sp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ahmad Zikry Salam"
             android:textAlignment="center"
-            android:textSize="25sp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_shp"
-            android:backgroundTint="@color/abu_abu"/>
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
     <Button
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:text="TO INSTAGRAM LUTFI"
-        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppinsbold"
         android:id="@+id/btninstalutfi"/>
     <Button
@@ -70,7 +70,7 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:text="TO INSTAGRAM Zikry"
-        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppinsbold"
         android:id="@+id/btninstazikry"/>
 

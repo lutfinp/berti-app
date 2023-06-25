@@ -64,7 +64,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity1"
             android:theme="@style/Theme.MyApplication"
             android:exported="false">
             <meta-data

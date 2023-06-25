@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.FragmentProfilBinding
 
+
 class Profil : Fragment() {
     private lateinit var binding: FragmentProfilBinding
     override fun onCreate(savedInstanceState: Bundle?) {

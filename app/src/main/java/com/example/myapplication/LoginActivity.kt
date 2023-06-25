@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
                 lifecycleScope.launch {
                     val passwordAkun = viewModel.cariAkun(edtUsername.text.toString())
                     if (passwordAkun == edtPass.text.toString()){
-                        startActivity(Intent(this@LoginActivity,MainActivity::class.java))
+                        startActivity(Intent(this@LoginActivity,MainActivity1::class.java))
                     }
                     else Snackbar.make(root,"Login Gagal",Snackbar.LENGTH_SHORT).show()
                 }
